@@ -2,6 +2,12 @@
 
 This HOW TO describe how I installed Ubuntu 20.04 with LUKS full Hard Disk Encryption together with Windows 10 setup with Bitlocker on a DELL XPS 15 Laptop.
 
+## Sound Driver
+
+```bash
+sudo apt install linux-oem-20.04
+```
+
 ## References
 
 - https://medium.com/@chrishantha/encrypting-disks-on-ubuntu-19-04-b50bfc65182a
