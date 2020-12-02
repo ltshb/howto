@@ -24,9 +24,30 @@ Follow the step defined in https://medium.com/@chrishantha/encrypting-disks-on-u
 
 As mentioned in above I had to repeat this procedure 3 times as the first two did not worked and broke my USB Key. No idea why, both USB Key were from the same Vendor ! The third USB that I used was from a different Vendor.
 
-# 6. Configure auto remove old kernel to avoid /boot partition full
+# 6. Configure auto removal of old kernel to avoid filling /boot partition
 
-See https://help.ubuntu.com/community/RemoveOldKernels#Configure_Unattended_Upgrades_to_Remove_Unneeded_Kernels_Automatically
+Configure auto removal of old kernel as follow
+
+1. Open the file `/etc/apt/apt.conf.d/50unattended-upgrades`
+
+```bash
+sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
+```
+
+1. Uncomment the following lines
+
+```bash
+Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
+Unattended-Upgrade::Remove-New-Unused-Dependencies "true";
+```
+
+1. Uncomment the following line and set it to true
+
+```bash
+Unattended-Upgrade::Remove-Unused-Dependencies "true";
+```
+
+For more infos or manual removal of old image in /boot see https://help.ubuntu.com/community/RemoveOldKernels#Configure_Unattended_Upgrades_to_Remove_Unneeded_Kernels_Automatically
 
 ## Sound Driver
 
