@@ -24,6 +24,10 @@ Follow the step defined in https://medium.com/@chrishantha/encrypting-disks-on-u
 
 As mentioned in above I had to repeat this procedure 3 times as the first two did not worked and broke my USB Key. No idea why, both USB Key were from the same Vendor ! The third USB that I used was from a different Vendor.
 
+# 6. Configure auto remove old kernel to avoid /boot partition full
+
+See https://help.ubuntu.com/community/RemoveOldKernels#Configure_Unattended_Upgrades_to_Remove_Unneeded_Kernels_Automatically
+
 ## Sound Driver
 
 This command seems to fix some bad sound quality with my DELL XPS 15.
