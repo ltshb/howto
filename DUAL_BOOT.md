@@ -49,6 +49,16 @@ Unattended-Upgrade::Remove-Unused-Dependencies "true";
 
 For more infos or manual removal of old image in /boot see https://help.ubuntu.com/community/RemoveOldKernels#Configure_Unattended_Upgrades_to_Remove_Unneeded_Kernels_Automatically
 
+## Time conflict
+
+See http://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/
+
+To fix time conflict between windows an ubuntu when switching enter the following command in Windows cmd as admin. This command configure windows to use UTC in RTC instead of local time
+
+```
+Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_QWORD /d 1
+```
+
 ## Sound Driver
 
 This command seems to fix some bad sound quality with my DELL XPS 15.
