@@ -30,22 +30,22 @@ Configure auto removal of old kernel as follow
 
 1. Open the file `/etc/apt/apt.conf.d/50unattended-upgrades`
 
-```bash
-sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
-```
+    ```bash
+    sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
+    ```
 
 1. Uncomment the following lines
 
-```bash
-Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
-Unattended-Upgrade::Remove-New-Unused-Dependencies "true";
-```
+    ```bash
+    Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
+    Unattended-Upgrade::Remove-New-Unused-Dependencies "true";
+    ```
 
 1. Uncomment the following line and set it to true
 
-```bash
-Unattended-Upgrade::Remove-Unused-Dependencies "true";
-```
+    ```bash
+    Unattended-Upgrade::Remove-Unused-Dependencies "true";
+    ```
 
 For more infos or manual removal of old image in /boot see https://help.ubuntu.com/community/RemoveOldKernels#Configure_Unattended_Upgrades_to_Remove_Unneeded_Kernels_Automatically
 
