@@ -61,11 +61,36 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ## Sound Driver
 
-This command seems to fix some bad sound quality with my DELL XPS 15.
+To fix some bad sound quality with my DELL XPS 15 I reinstall the sound card ALSA driver and also installed pulseaudio.
 
-```bash
-sudo apt install linux-oem-20.04
-```
+1. Remove the ALSA packages.
+
+    ```bash
+    sudo apt --purge remove linux-sound-base alsa-base alsa-utils
+    ```
+ 
+ 1. Reinstall the same packages.
+ 
+    ```bash
+    sudo apt-get install linux-sound-base alsa-base alsa-utils
+    sudo apt install gdm3 ubuntu-desktop
+    ```
+    
+1. Install pulseaudio
+
+    ```bash
+    sudo add-apt-repository ppa:nilarimogard/webupd8
+    sudo apt-get update
+    sudo apt-get install pulseaudio pulseaudio-utils pulseaudio-equalizer
+    ```
+
+1. Reboot
+
+    ```bash
+    sudo reboot
+    ```
+
+See https://askubuntu.com/questions/722685/realtek-audio-drivers-for-ubuntu
 
 ## References
 
