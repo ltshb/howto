@@ -92,6 +92,14 @@ To fix some bad sound quality with my DELL XPS 15 I reinstall the sound card ALS
 
 See https://askubuntu.com/questions/722685/realtek-audio-drivers-for-ubuntu
 
+## Crash
+
+Install the following driver to avoid a ubuntu crash
+
+```bash
+sudo apt install ubuntu-drivers-common
+```
+
 ## References
 
 - https://medium.com/@chrishantha/encrypting-disks-on-ubuntu-19-04-b50bfc65182a
