@@ -100,6 +100,10 @@ Install the following driver to avoid a ubuntu crash
 sudo apt install ubuntu-drivers-common
 ```
 
+## Battery life
+
+https://doc.ubuntu-fr.org/tlp
+
 ## References
 
 - https://medium.com/@chrishantha/encrypting-disks-on-ubuntu-19-04-b50bfc65182a
