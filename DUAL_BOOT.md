@@ -112,6 +112,13 @@ The use this config
 sudo cp asset/dual-boot/tlp.conf /etc/
 ```
 
+Install prime-select
+
+```bash
+sudo apt install nvidia-prime
+sudo prime-select intel
+```
+
 ## References
 
 - https://medium.com/@chrishantha/encrypting-disks-on-ubuntu-19-04-b50bfc65182a
