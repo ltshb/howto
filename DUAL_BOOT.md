@@ -106,10 +106,24 @@ To increase battery life on Battery install tlp
 
 https://doc.ubuntu-fr.org/tlp
 
+```bash
+sudo install tlp
+```
+
 The use this config 
 
 ```bash
 sudo cp asset/dual-boot/tlp.conf /etc/
+```
+
+Install tlp graphic tool
+
+```bash
+sudo add-apt-repository ppa:slimbook/slimbook
+
+sudo apt update
+
+sudo apt install slimbookbattery
 ```
 
 Install prime-select
