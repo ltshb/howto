@@ -102,7 +102,15 @@ sudo apt install ubuntu-drivers-common
 
 ## Battery life
 
+To increase battery life on Battery install tlp
+
 https://doc.ubuntu-fr.org/tlp
+
+The use this config 
+
+```bash
+sudo cp asset/dual-boot/tlp.conf /etc/
+```
 
 ## References
 
