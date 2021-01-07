@@ -50,6 +50,12 @@
     sudo fuser -k /var/cache/debconf/config.dat
     ```
     
+1. Check `/boot` partition size again
+
+    ```bash
+    sudo baobab
+    ```
+    
 ## References
 
 - [Safely Removing Old Kernels](https://help.ubuntu.com/community/RemoveOldKernels#Safely_Removing_Old_Kernels)
