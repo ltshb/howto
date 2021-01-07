@@ -34,7 +34,20 @@
 1. Now we'll use dpkg in order to TRY to purge the kernel package for the same old kernel: 
 
     ```bash
-    sudo dpkg --purge linux-image-4.2.0-15-generic
+    sudo dpkg --purge linux-image-5.4.0-58-generic
+    (Reading database ... 331840 files and directories currently installed.)
+    Removing linux-image-5.4.0-58-generic (5.4.0-58.64) ...
+   debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable
+   dpkg: error processing package linux-image-5.4.0-58-generic (--purge):
+     installed linux-image-5.4.0-58-generic package pre-removal script subprocess returned error exit status 1
+   Errors were encountered while processing:
+     linux-image-5.4.0-58-generic
+    ```
+    
+1. If `/var/cache/debconf/config.dat` is locked, then unlock it and retry the step above
+
+    ```bash
+    sudo fuser -k /var/cache/debconf/config.dat
     ```
     
 ## References
