@@ -96,6 +96,8 @@ See https://askubuntu.com/questions/722685/realtek-audio-drivers-for-ubuntu
 
 `sudo sed -i 's/wifi.powersave = 3/wifi.powersave = 2/' /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf`
 
+`sudo apt-get install --reinstall linux-firmware`
+
 ## Crash
 
 Install the following driver to avoid a ubuntu crash
