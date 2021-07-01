@@ -98,6 +98,10 @@ See https://askubuntu.com/questions/722685/realtek-audio-drivers-for-ubuntu
 
 `sudo apt-get install --reinstall linux-firmware`
 
+`sudo vi /etc/default/crda`
+then
+`REGDOMAIN=CH`
+
 ## Crash
 
 Install the following driver to avoid a ubuntu crash
