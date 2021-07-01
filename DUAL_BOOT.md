@@ -92,6 +92,10 @@ To fix some bad sound quality with my DELL XPS 15 I reinstall the sound card ALS
 
 See https://askubuntu.com/questions/722685/realtek-audio-drivers-for-ubuntu
 
+## WIFI
+
+`sudo sed -i 's/wifi.powersave = 3/wifi.powersave = 2/' /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf`
+
 ## Crash
 
 Install the following driver to avoid a ubuntu crash
