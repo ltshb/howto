@@ -50,7 +50,7 @@
     1. Instead of the setps above do the following command
 
         ```bash
-        for kernel in $(dpkg -l | tail -n +6 | grep -E 'linux-image-[0-9]+' | awk '{print $2}' | awk  '!/'`uname -r | awk -F- '{print $1}'`'/ {print $1}' | sed 's/linux-image-//'); do sudo update-initramfs -d -k ${kernel}; sudo dpkg --purge linux-image-${kernel}; done
+        kernel=$(uname -r); for kernel in $(dpkg -l | tail -n +6 | grep -E 'linux-image-[0-9]+' | awk '{print $2}' | awk  '!/'${kernel}'/ {print $1}' | sed 's/linux-image-//'); do sudo update-initramfs -d -k ${kernel}; sudo dpkg --purge linux-image-${kernel}; echo "${kernel} removed"; done
         ```
         
 1. If `/var/cache/debconf/config.dat` is locked, then unlock it and retry the step above
