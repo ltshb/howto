@@ -117,7 +117,7 @@ To increase battery life on Battery install tlp
 https://doc.ubuntu-fr.org/tlp
 
 ```bash
-sudo install tlp
+sudo apt install tlp
 ```
 
 The use this config 
