@@ -94,13 +94,23 @@ See https://askubuntu.com/questions/722685/realtek-audio-drivers-for-ubuntu
 
 ## WIFI
 
-`sudo sed -i 's/wifi.powersave = 3/wifi.powersave = 2/' /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf`
+```bash
+sudo sed -i 's/wifi.powersave = 3/wifi.powersave = 2/' /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+```
 
-`sudo apt-get install --reinstall linux-firmware`
+``bash
+sudo apt-get install --reinstall linux-firmware
+```
 
-`sudo vi /etc/default/crda`
+```bash
+sudo vi /etc/default/crda
+```
+
 then
-`REGDOMAIN=CH`
+
+```bash
+REGDOMAIN=CH
+```
 
 ## Crash
 
