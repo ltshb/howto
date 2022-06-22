@@ -2,8 +2,13 @@
 
 # Safely removing old kernels from /boot partition
 
-1. `sudo rm -rv ${TMPDIR:-/var/tmp}/mkinitramfs-*`
-1. Determine current kernel
+1. Remove temp files
+    
+    ```bash
+    sudo rm -rv ${TMPDIR:-/var/tmp}/mkinitramfs-*
+    ```
+    
+3. Determine current kernel
 
     ```bash
     $ uname -r
