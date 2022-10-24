@@ -12,7 +12,12 @@ When you deactivate the Intel RST feature you have either to completely reinstal
 
 # 3. Make room for Linux with the Windows Disk Managment Tool
 
-I shrink my C: partition using Windows Disk Management Tool (see https://www.dell.com/support/article/de-ch/sln301754/how-to-install-ubuntu-and-windows-8-or-10-as-a-dual-boot-on-your-dell-pc?lang=en) and left the space unalocated. For my linux I left 128GB.
+I shrink my C: partition using Windows Disk Management Tool (see https://www.dell.com/support/article/de-ch/sln301754/how-to-install-ubuntu-and-windows-8-or-10-as-a-dual-boot-on-your-dell-pc?lang=en) and left the space unalocated. 
+
+For my linux I left 128GB.
+
+
+⚠️ *Turns out that when using a lot docker, 128GB is not enough and I have to regularly purge my docker containers/images*
 
 # 4. Make a Ubuntu 20.04 USB Bootable
 
@@ -23,6 +28,14 @@ Although this should a very easy step with plenty of tutorial on how to do it on
 Follow the step defined in https://medium.com/@chrishantha/encrypting-disks-on-ubuntu-19-04-b50bfc65182a
 
 As mentioned in above I had to repeat this procedure 3 times as the first two did not worked and broke my USB Key. No idea why, both USB Key were from the same Vendor ! The third USB that I used was from a different Vendor.
+
+Based on the link above I create 3 partitions:_
+
+1. /boot => 512MB
+2. / (root) => 48.8GB
+3. /home => 79GB
+
+⚠️ **512MB for my /boot partition is not enough for ubuntu 20.04 !!! I have to often do some manual kernel cleanup due to /boot being full, see https://github.com/ltshb/howto/blob/main/BOOT_PARTITION_CLEAN_UP.md. I would recommend at 1GB for /boot.**
 
 # 6. Configure auto removal of old kernel to avoid filling /boot partition
 
